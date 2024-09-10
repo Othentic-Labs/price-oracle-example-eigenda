@@ -70,8 +70,8 @@ services:
 
 - Aggregator node
 - 3 Attester nodes
-- AVS WebAPI endpoint
-- TaskPerformer endpoint
+- Validation Service endpoint
+- Execution Service endpoint
 - Sync Shares of operators across layers
 
 
@@ -86,7 +86,7 @@ docker-compose up --build
 
 # 🚀 Executing a task
 To execute a task we send a 
-POST request to the Task Performer service:
+POST request to the Execution Service:
 
 
 ``` console 
@@ -103,17 +103,17 @@ docker-compose build --no-cache
 ```
 
 ## 🏗️ Architecture
-The Othentic Attester nodes communicate with an AVS WebAPI endpoint which
+The Othentic attester nodes communicate with a Validation Service endpoint that
 validates tasks on behalf of the nodes. The attesters then sign the tasks based
-on the AVS WebAPI response.
+on the Validation Service's response.
 
 Attester nodes can either all communicate with a centralized endpoint or each
 implement their own validation logic.
 
-### AVS WebAPI
+### Validator Service
 ```
 POST task/validate returns (bool) {"proofOfTask": "{proofOfTask}"};
 ```
 
-### Sync Shares
-sync the shares of operators between L1 and L2 at a fixed interval. The default interval is 12h and can be modified inside the docker-compose file
+### Shares Syncer
+Syncs the shares of operators between L1 and L2 at a fixed interval. The default interval is 12h and can be modified in the docker-compose file
