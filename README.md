@@ -40,7 +40,6 @@ othentic-cli network deploy \\
 ```
 
 # 🏋️‍♂️ Operators Setup
-
 Register as an operator for both EigenLayer and the AVS
 ``` console
 othentic-cli operator register
@@ -60,9 +59,6 @@ Deposit 0.01 stETH into EigenLayer pool.
 othentic-cli operator deposit --strategy stETH --shares 0.01
 ```
 ✅  Your internal Operators are now ready to opt-in to your AVS.
-
-
-
 
 ## ▶️ Run the demo
 We provide a sample docker-compose configuration which sets up the following
@@ -110,10 +106,23 @@ on the Validation Service's response.
 Attester nodes can either all communicate with a centralized endpoint or each
 implement their own validation logic.
 
-### Validator Service
+### EigenDA
+EigenDA serves as the data availability layer for the AVS. The performer uploads the price data as a blob to EigenDA and shares the `blobId` with the rest of the AVS.
+
+### Execution Service
+The execution service is ran by the performer node and is used in order to perform new tasks and share their results with the rest of the network.  
+
+### Validation Service
+The validation service can be a centralized service or a distributed one, and is used by attesters in order to validate the correctness of an execution of a task.
 ```
 POST task/validate returns (bool) {"proofOfTask": "{proofOfTask}"};
 ```
 
 ### Shares Syncer
 Syncs the shares of operators between L1 and L2 at a fixed interval. The default interval is 12h and can be modified in the docker-compose file
+
+## Interactive EigenDA CLI Application
+In order to understand better how to use and interface EigenDA, we've composed a simple CLI application that allows using EigenDA interactively:
+```console
+ts-node Execution_Service/interactiveEigenDA.ts
+```
