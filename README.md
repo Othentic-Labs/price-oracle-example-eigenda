@@ -32,10 +32,10 @@ You need to register 3 self-deploy Operators with a minimum of 0.01 stETH.
 To deploy the AVS’s on-chain components, run the following command:
 
 ``` console
-othentic-cli network deploy \\
-    --erc20 0x73967c6a0904aA032C103b4104747E88c566B1A2 \\
-    --l1-initial-deposit 1000000000000000000 \\
-    --l2-initial-deposit 2000000000000000000 \\
+othentic-cli network deploy \
+    --erc20 0x73967c6a0904aA032C103b4104747E88c566B1A2 \
+    --l1-initial-deposit 1000000000000000000 \
+    --l2-initial-deposit 2000000000000000000 \
     --name test-avs-name
 ```
 
