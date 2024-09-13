@@ -20,7 +20,7 @@ Verify installation by the command:
 ```console
 othentic-cli -h
 ```
-# ⚙️ Prerequisites
+# Prerequisites
 You need to register 3 self-deploy Operators with a minimum of 0.01 stETH.
 
 * Deployer account:
