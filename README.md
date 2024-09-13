@@ -1,4 +1,4 @@
-# 🍀 Othentic AVS Samples
+# 🍀 Othentic AVS Samples & EigenDA
 ![EigenDA abstract](https://github.com/user-attachments/assets/61d5521e-9da8-40f2-a0da-f53d071640a4)
 
 # ⚙️ Set Up
