@@ -18,7 +18,7 @@ Verify installation by the command:
 ```console
 othentic-cli -h
 ```
-# 🧰 Prerequisites
+# ⚙️ Prerequisites
 You need to register 3 self-deploy Operators with a minimum of 0.01 stETH.
 
 * Deployer account:
@@ -39,7 +39,7 @@ othentic-cli network deploy \
     --name test-avs-name
 ```
 
-# 🏋️‍♂️ Operators Setup
+# 🛠️ Operators Setup
 Register as an operator for both EigenLayer and the AVS
 ``` console
 othentic-cli operator register
@@ -80,7 +80,7 @@ docker-compose up --build
 > This might take a few minutes when building the images
 
 
-# ⚡️ Executing a task 
+# ⚡️ Execute a task 
 To execute a task we send a 
 POST request to the Execution Service:
 
