@@ -2,12 +2,12 @@
 
 # ⚙️ Set Up
 
-To set up the environment, create a `.env` file with the usual Othentic
+To set up the environment, create a `.env` file with the default Othentic
 configurations (see the `.env.example`).
 
 
 # ✈️ Install the Othentic CLI 
-Installing Othentic CLI with `npm`:
+Install Othentic CLI with `npm`:
 
 ```console
 npm i -g @othentic/othentic-cli
@@ -80,7 +80,7 @@ docker-compose up --build
 > This might take a few minutes when building the images
 
 
-# 🚀 Executing a task
+# ⚡️ Executing a task 
 To execute a task we send a 
 POST request to the Execution Service:
 
@@ -99,27 +99,27 @@ docker-compose build --no-cache
 ```
 
 ## 🏗️ Architecture
-The Othentic attester nodes communicate with a Validation Service endpoint that
+The attester nodes communicate with a Validation Service endpoint that
 validates tasks on behalf of the nodes. The attesters then sign the tasks based
 on the Validation Service's response.
 
-Attester nodes can either all communicate with a centralized endpoint or each
+Attester nodes can either all communicate with a sole endpoint or
 implement their own validation logic.
 
 ### EigenDA
 EigenDA serves as the data availability layer for the AVS. The performer uploads the price data as a blob to EigenDA and shares the `blobId` with the rest of the AVS.
 
 ### Execution Service
-The execution service is ran by the performer node and is used in order to perform new tasks and share their results with the rest of the network.  
+The execution service is run by the performer node and is used to perform new tasks and share their results with the rest of the network.  
 
 ### Validation Service
-The validation service can be a centralized service or a distributed one, and is used by attesters in order to validate the correctness of an execution of a task.
+The validation service can be a sole service or a distributed one and is used by attesters in order to validate the correctness of an execution of a task.
 ```
 POST task/validate returns (bool) {"proofOfTask": "{proofOfTask}"};
 ```
 
 ### Shares Syncer
-Syncs the shares of operators between L1 and L2 at a fixed interval. The default interval is 12h and can be modified in the docker-compose file
+Syncs the shares of operators between L1 and L2 at a fixed interval. The default interval is 12h and can be modified in the docker-compose file.
 
 ## Interactive EigenDA CLI Application
 In order to understand better how to use and interface EigenDA, we've composed a simple CLI application that allows using EigenDA interactively:
