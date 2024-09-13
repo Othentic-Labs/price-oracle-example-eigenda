@@ -8,7 +8,7 @@ To set up the environment, create a `.env` file with the default Othentic
 configurations (see the `.env.example`).
 
 
-# ✈️ Install the Othentic CLI 
+# ⬇️ Install the Othentic CLI 
 Install Othentic CLI with `npm`:
 
 ```console
