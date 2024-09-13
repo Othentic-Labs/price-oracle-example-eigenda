@@ -1,5 +1,6 @@
 # 🍀 Othentic AVS Sample & EigenDA
-![EigenDA abstract](https://github.com/user-attachments/assets/61d5521e-9da8-40f2-a0da-f53d071640a4)
+![EigenDA abstra2ct](https://github.com/user-attachments/assets/bce91d7a-2d41-4bc2-a044-77af232f1dab)
+
 
 # ⚙️ Set Up
 
